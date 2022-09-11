@@ -20,10 +20,11 @@ public class AddResponseHeadersMiddleware {
 	/// 中间件执行主体。
 	/// </summary>
 	/// <param name="httpContext">当前的 <see cref="HttpContent"/></param>
-	/// <returns></returns>
 	public async Task InvokeAsync(HttpContext httpContext) {
 		foreach (var header in _headers) {
-			httpContext.Response.Headers.Add(header);
+			if (!httpContext.Response.Headers.ContainsKey(header.Key)) {
+				httpContext.Response.Headers.Add(header);
+			}
 		}
 
 		await _next(httpContext);
