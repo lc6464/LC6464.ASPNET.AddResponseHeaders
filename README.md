@@ -42,7 +42,7 @@ var app = builder.Build();
 
 app.UseAddResponseHeaders(new HeaderDictionary { // 为每个响应添加头
 	{ "Expect-CT", "max-age=31536000; enforce" },
-	{ "Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload" }
+	{ "X-Content-Type-Options", "nosniff" }
 });
 
 
