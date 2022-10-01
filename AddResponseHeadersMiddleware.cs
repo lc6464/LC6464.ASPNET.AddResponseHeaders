@@ -21,9 +21,12 @@ public class AddResponseHeadersMiddleware {
 	/// </summary>
 	/// <param name="httpContext">当前的 <see cref="HttpContent"/></param>
 	public async Task InvokeAsync(HttpContext httpContext) {
+		var responseHeaders = httpContext.Response.Headers;
 		foreach (var header in _headers) {
-			if (!httpContext.Response.Headers.ContainsKey(header.Key)) {
-				httpContext.Response.Headers.Add(header);
+			if (!responseHeaders.ContainsKey(header.Key)) { // 若响应头中不存在该头，则添加
+				responseHeaders.Add(header);
+			} else if (responseHeaders[header.Key] != header.Value) { // 若响应头中已存在该头且值不一致，则合并
+				responseHeaders[header.Key] = StringValues.Concat(responseHeaders[header.Key], header.Value);
 			}
 		}
 

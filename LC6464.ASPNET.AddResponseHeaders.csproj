@@ -16,8 +16,8 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<Authors>LC</Authors>
-		<Version>1.1.1.0</Version>
-		<PackageReleaseNotes>修复 README 中存在的问题。</PackageReleaseNotes>
+		<Version>1.2.0.0</Version>
+		<PackageReleaseNotes>更改响应头已存在时的行为为若指定的值与已有的不一致则合并。</PackageReleaseNotes>
 	</PropertyGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
