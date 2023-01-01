@@ -16,7 +16,7 @@
 		<!-- 一些东西 -->
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="LC6464.ASPNET.AddResponseHeaders" Version="1.2.0" />
+		<PackageReference Include="LC6464.ASPNET.AddResponseHeaders" Version="1.3.0" />
 		<!-- PackageReference，请使用 Visual Studio 或 dotnet cli 等工具添加 -->
 	</ItemGroup>
 	<ItemGroup>
