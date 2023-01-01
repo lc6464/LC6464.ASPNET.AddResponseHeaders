@@ -8,7 +8,7 @@
 		<AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Description>在 ASP.NET 中用于快速为所有响应添加头的中间件。</Description>
-		<Copyright>Copyright © 2022 LC. All rights reserved.</Copyright>
+		<Copyright>Copyright © 2022-2023 LC. All rights reserved.</Copyright>
 		<PackageProjectUrl>https://github.com/lc6464/LC6464.ASPNET.AddResponseHeaders</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/lc6464/LC6464.ASPNET.AddResponseHeaders</RepositoryUrl>
 		<PackageTags>ASP.NET;HTTP;Response;Header</PackageTags>
